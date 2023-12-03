@@ -196,7 +196,7 @@ for (i in 1:length(file_names)) {
   data1$"O/CxI" <- data1$I*data1$`O/C` 
   data1$DBE <- data1$I*data1$rdb
   data1$NOSCxI <- data1$I*data1$NOSC
-  data1$"DBE/C" <- (data1$rdb/data1$H)*data1$I
+  data1$"DBE/C" <- (data1$rdb/data1$C)*data1$I
   data1$Aimod <- data1$I*data1$positiveAImod
   write.csv(data1,paste0("C:/derivatization/6/",file_names[i],".csv")) 
   data2[i,] <- c(nrow(data1),sum(data1$CxI)/sum(data1$I),sum(data1$HxI)/sum(data1$I),
@@ -298,7 +298,7 @@ for (i in 1:length(file_names)) {
   data1$"O/CxI" <- data1$I*data1$`O/C` 
   data1$DBE <- data1$I*data1$rdb
   data1$NOSCxI <- data1$I*data1$NOSC
-  data1$"DBE/C" <- (data1$rdb/data1$H)*data1$I
+  data1$"DBE/C" <- (data1$rdb/data1$C)*data1$I
   data1$Aimod <- data1$I*data1$positiveAImod
   for(y in 1:nrow(data1)){
     data1[y,"Originalformula"] <- paste0("C",data1[y,"C"]-data1[y,"F"]/5*7,"H",data1[y,"H"]-data1[y,"F"]/5*2,"O",data1[y,"O"],"N",data1[y,"N"]-data1[y,"F"]/5*1,"S",data1[y,"S"],"F",data1[y,"F"]-data1[y,"F"]/5*5)
